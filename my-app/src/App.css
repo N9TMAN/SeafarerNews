@@ -1,0 +1,172 @@
+.unselect {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.app {
+  background-color: #fff;
+  min-width: 320px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: flex-end;
+  height: 50px;
+}
+
+.logo-box,
+.title-box {
+  position: relative;
+  height: 100%;
+}
+
+.logo-box {
+  height: calc(100% + 10px);
+  top: 5px;
+}
+
+.logo-box img,
+.title-box img,
+.logo-box svg,
+.title-box svg {
+  display: flex;
+  height: 100%;
+}
+
+.title-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 29px;
+  line-height: 24px;
+  font-weight: 700;
+  justify-content: flex-end;
+  margin-left: 8px;
+}
+
+.header .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+}
+
+.header-box {
+  display: flex;
+  align-items: center;
+}
+
+.header,
+.footer {
+  background-color: #0694d4;
+  color: #fff;
+  fill: #fff;
+}
+
+.dark .header,
+.dark .footer {
+  color: #231f20;
+  fill: #231f20;
+}
+
+.dark .app {
+  background-color: #231f20;
+  color: #fff;
+}
+
+.header-nav {
+  display: flex;
+}
+
+.header-bg {
+  position: absolute;
+  overflow: hidden;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(90deg, rgba(6, 148, 212, 0) 0%, #3dc5ff 50%, rgba(6, 148, 212, 0) 90%);
+  animation: HeaderBg 2s ease-out;
+}
+
+.header-bg-img {
+  width: 200px;
+  height: 60px;
+  background-image: url(./image/ship.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 2px;
+  background-size: 47%;
+  animation: HeaderBgImg 2s ease-out;
+}
+
+.app .navbar-box {
+  color: #006bab;
+}
+
+.app .navbar-box svg {
+  color: #3dc5ff;
+}
+
+.dark .app .navbar-box {
+  color: #3dc5ff;
+}
+
+.dark .app .navbar-box svg {
+  color: #006bab;
+}
+
+.app {
+  min-height: 100vh;
+  position: relative;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@keyframes HeaderBgImg {
+  0% {
+    margin-right: 150px;
+    margin-top: 10px;
+    opacity: 0;
+    transform: scale(.8);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    margin-top: 0;
+    transform: scale(1);
+    margin-right: 0;
+  }
+}
+
+@keyframes HeaderBg {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .title-box {
+    display: none;
+  }
+}
