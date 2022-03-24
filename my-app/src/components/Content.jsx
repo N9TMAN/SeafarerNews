@@ -1,6 +1,11 @@
+import React from 'react';
+import Profile from './Profile/Profile';
+
 const Content = () => {
   return (
-    <div>Content</div>
+    <div className='content'>
+      <Profile />
+    </div>
   )
 }
 

@@ -1,5 +1,5 @@
-import Navbar from './Navbar';
-import Content from './Content'
+import Navbar from './../Navbar';
+import Content from './../Content';
 
 // let headerStyleHeight = document.querySelector('.main');
 // let root = document.querySelector('.app');

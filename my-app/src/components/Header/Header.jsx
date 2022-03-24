@@ -1,10 +1,10 @@
-import Logo from './Logo';
+import Logo from './Logo/Logo';
 import './Header.css';
 import s from './Header.module.css';
-import Search from './Search';
-import HeaderBg from './HeaderBg';
-import AccountMenu from './AccountMenu';
-import SwitchTheme from './SwitchTheme';
+import Search from './Search/Search';
+import HeaderBg from './Bg/HeaderBg';
+import AccountMenu from './Navbar/AccountMenu';
+import SwitchTheme from './Navbar/SwitchTheme';
 
 const Header = () => {
   return (
