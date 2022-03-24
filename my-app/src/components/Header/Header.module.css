@@ -1,0 +1,16 @@
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+}

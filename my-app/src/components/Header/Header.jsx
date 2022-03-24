@@ -1,8 +1,6 @@
 import Logo from './Logo';
-// import Button from '@mui/material/Button';
-// import MyButton from './../styles/MyButton';
-// import { NewButton } from './../styles/MyButton';
-// import MuiNav from './MuiNav';
+import './Header.css';
+import s from './Header.module.css';
 import Search from './Search';
 import HeaderBg from './HeaderBg';
 import AccountMenu from './AccountMenu';
@@ -10,14 +8,14 @@ import SwitchTheme from './SwitchTheme';
 
 const Header = () => {
   return (
-    <header className="header unselect">
-      <div className="container">
+    <header className='header unselect'>
+      <div className={`container ${s.container}`}>
         <HeaderBg />
-        <div className="header-box">
+        <div className={s.box}>
           <Logo />
           <Search />
         </div>
-        <div className="header-nav">
+        <div className={s.nav}>
           <SwitchTheme />
           <AccountMenu />
         </div>

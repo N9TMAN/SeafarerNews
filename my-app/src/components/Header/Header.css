@@ -1,0 +1,40 @@
+.header,
+.footer {
+  background-color: #0694d4;
+  color: #fff;
+  fill: #fff;
+}
+
+.dark .header,
+.dark .footer {
+  color: #231f20;
+  fill: #231f20;
+}
+
+.dark .app {
+  background-color: #231f20;
+  color: #fff;
+}
+
+.header-bg {
+  position: absolute;
+  overflow: hidden;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(90deg, rgba(6, 148, 212, 0) 0%, #3dc5ff 50%, rgba(6, 148, 212, 0) 90%);
+  animation: HeaderBg 2s ease-out;
+}
+
+.header-bg-img {
+  width: 200px;
+  height: 60px;
+  background-image: url(./../../image/ship.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 2px;
+  background-size: 47%;
+  animation: HeaderBgImg 2s ease-out;
+}
