@@ -15,7 +15,8 @@ export default function MyPosts() {
       />
       <Button variant="outlined">Send</Button>
       <div className="post-box">
-        <Post />
+        <Post name='X' text='Gggggg...'/>
+        <Post name='Y' text='SSSSss...'/>
       </div>
     </div>
   )
