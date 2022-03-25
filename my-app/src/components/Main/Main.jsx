@@ -1,5 +1,8 @@
-import Navbar from './../Navbar';
-import Content from './../Content';
+import React from 'react';
+import s from './Main.module.css';
+import Navbar from './Navbar/Navbar';
+import Messages from './../Messages/Messages';
+import Profile from './../Profile/Profile';
 
 // let headerStyleHeight = document.querySelector('.main');
 // let root = document.querySelector('.app');
@@ -9,10 +12,12 @@ import Content from './../Content';
 const Main = () => {
   return (
     <main className="main">
-      <div className="container">
-        <Navbar />
-        <Content />
-        Main
+      <div className={`container ${s.container}`}>
+        <Navbar className={s.navbar}/>
+        <div className={s.content}>
+          <Profile />
+          <Messages />
+        </div>
       </div>
     </main>
   )

@@ -5,11 +5,12 @@ import Paper from '@mui/material/Paper';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
-import DraftsIcon from '@mui/icons-material/Drafts';
 import NewspaperIcon from '@mui/icons-material/Newspaper';
 import Divider from '@mui/material/Divider';
 import Cloud from '@mui/icons-material/Cloud';
 import HomeIcon from '@mui/icons-material/Home';
+import PersonIcon from '@mui/icons-material/Person';
+import ForumIcon from '@mui/icons-material/Forum';
 
 export default function TypographyMenu() {
   return (
@@ -27,13 +28,18 @@ export default function TypographyMenu() {
           </ListItemIcon>
           <Typography variant="inherit" noWrap>News</Typography>
         </MenuItem>
+        <Divider />
         <MenuItem>
           <ListItemIcon>
-            <DraftsIcon fontSize="small" />
+            <PersonIcon fontSize="small" />
           </ListItemIcon>
-          <Typography variant="inherit" noWrap>
-            A very long text that overflows
-          </Typography>
+          <Typography variant="inherit" noWrap>Profile</Typography>
+        </MenuItem>
+        <MenuItem>
+          <ListItemIcon>
+            <ForumIcon fontSize="small" />
+          </ListItemIcon>
+          <Typography variant="inherit" noWrap>Messages</Typography>
         </MenuItem>
         <Divider />
         <MenuItem>
