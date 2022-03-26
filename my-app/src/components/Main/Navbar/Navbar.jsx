@@ -1,6 +1,6 @@
 import * as React from 'react';
 import MenuList from '@mui/material/MenuList';
-import MenuItem from '@mui/material/MenuItem';
+import MyMenuItem from './../../../styles/MyMenuItem';
 import Paper from '@mui/material/Paper';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
@@ -13,61 +13,63 @@ import ForumIcon from '@mui/icons-material/Forum';
 import MyLink from "./../../../styles/MyLink";
 import SettingsIcon from '@mui/icons-material/Settings';
 import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
+import s from './Navbar.module.css';
+import './Navbar.css';
 
 export default function TypographyMenu() {
   return (
-    <Paper className="navbar-box" sx={{ width: 230, color: 'inherit', backgroundColor: 'inherit', boxShadow: 'none' }}>
+    <Paper className={`navbar-box ${s.navbar}`} sx={{ width: 230, color: 'inherit', backgroundColor: 'inherit', boxShadow: 'none' }}>
       <MenuList>
-        <MenuItem sx={{ padding: '0' }}>
+        <MyMenuItem>
           <MyLink to="/">
             <ListItemIcon sx={{ color: 'inherit' }}>
               <HomeIcon fontSize="small" />
             </ListItemIcon>
             <Typography variant="inherit" noWrap>Home</Typography>
           </MyLink>
-        </MenuItem>
-        <MenuItem sx={{ padding: '0' }}>
+        </MyMenuItem>
+        <MyMenuItem>
           <MyLink to="/news">
             <ListItemIcon>
               <NewspaperIcon fontSize="small" />
             </ListItemIcon>
             <Typography variant="inherit" noWrap>News</Typography>
           </MyLink>
-        </MenuItem>
+        </MyMenuItem>
         <Divider />
-        <MenuItem sx={{ padding: '0' }}>
+        <MyMenuItem>
           <MyLink to="/profile">
             <ListItemIcon>
               <PersonIcon fontSize="small" />
             </ListItemIcon>
             <Typography variant="inherit" noWrap>Profile</Typography>
           </MyLink>
-        </MenuItem>
-        <MenuItem sx={{ padding: '0' }}>
+        </MyMenuItem>
+        <MyMenuItem>
           <MyLink to="/messages">
             <ListItemIcon>
               <ForumIcon fontSize="small" />
             </ListItemIcon>
             <Typography variant="inherit" noWrap>Messages</Typography>
           </MyLink>
-        </MenuItem>
-        <MenuItem sx={{ padding: '0' }}>
+        </MyMenuItem>
+        <MyMenuItem>
           <MyLink to="/music">
             <ListItemIcon>
               <LibraryMusicIcon fontSize="small" />
             </ListItemIcon>
             <Typography variant="inherit" noWrap>Music</Typography>
           </MyLink>
-        </MenuItem>
+        </MyMenuItem>
         <Divider />
-        <MenuItem sx={{ padding: '0' }}>
+        <MyMenuItem>
           <MyLink to="/settings">
             <ListItemIcon>
               <SettingsIcon fontSize="small" />
             </ListItemIcon>
             <ListItemText>Settings</ListItemText>
           </MyLink>
-        </MenuItem>
+        </MyMenuItem>
       </MenuList>
     </Paper >
   );
