@@ -50,7 +50,7 @@
   margin-left: 8px;
 }
 
-.app .navbar-box {
+.app .navbar-box a {
   color: #006bab;
 }
 
@@ -58,12 +58,16 @@
   color: #3dc5ff;
 }
 
-.dark .app .navbar-box {
+.dark .app .navbar-box a {
   color: #3dc5ff;
 }
 
 .dark .app .navbar-box svg {
   color: #006bab;
+}
+
+.dark .textarea {
+  color: #fff;
 }
 
 .app {

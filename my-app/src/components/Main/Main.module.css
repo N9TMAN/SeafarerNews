@@ -1,16 +1,16 @@
 .container {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-template-areas:
-    "nav content",
+    "nav main main"
+    "nav main main";
 }
 
 .navbar {
-  grid-area: "nav";
+  grid-area: nav;
 }
 
 .content {
-  grid-area: "content";
+  grid-area: main;
 }

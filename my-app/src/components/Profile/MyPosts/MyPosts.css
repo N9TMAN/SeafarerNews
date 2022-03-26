@@ -1,9 +1,3 @@
-.textarea {
-  width: '100%';
-  background-color: 'initial';
-  color: 'initial';
-}
-
-.dark .textarea {
-  color: #fff;
+.textarea-box {
+  display: flex;
 }

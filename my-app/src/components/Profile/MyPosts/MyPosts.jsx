@@ -7,16 +7,18 @@ import Post from './Post/Post';
 
 export default function MyPosts() {
   return (
-    <div className="myposts">      
+    <div className="myposts">
       MyPosts
-      <MyTextarea className={`textarea ${s.textarea}`}
-        minRows={3}
-        placeholder="Comments..."
-      />
+      <div className="textarea-box">
+        <MyTextarea className={`textarea ${s.textarea}`}
+          minRows={3}
+          placeholder="Comments..."
+        />
+      </div>
       <Button variant="outlined">Send</Button>
       <div className="post-box">
-        <Post name='X' text='Gggggg...'/>
-        <Post name='Y' text='SSSSss...'/>
+        <Post name='X' text='Gggggg...' />
+        <Post name='Y' text='SSSSss...' />
       </div>
     </div>
   )

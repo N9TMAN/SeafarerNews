@@ -7,49 +7,69 @@ import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
 import NewspaperIcon from '@mui/icons-material/Newspaper';
 import Divider from '@mui/material/Divider';
-import Cloud from '@mui/icons-material/Cloud';
 import HomeIcon from '@mui/icons-material/Home';
 import PersonIcon from '@mui/icons-material/Person';
 import ForumIcon from '@mui/icons-material/Forum';
+import MyLink from "./../../../styles/MyLink";
+import SettingsIcon from '@mui/icons-material/Settings';
+import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
 
 export default function TypographyMenu() {
   return (
     <Paper className="navbar-box" sx={{ width: 230, color: 'inherit', backgroundColor: 'inherit', boxShadow: 'none' }}>
       <MenuList>
-        <MenuItem>
-          <ListItemIcon sx={{ color: 'inherit'}}>
-            <HomeIcon fontSize="small" />
-          </ListItemIcon>
-          <Typography variant="inherit" noWrap>Home</Typography>
+        <MenuItem sx={{ padding: '0' }}>
+          <MyLink to="/">
+            <ListItemIcon sx={{ color: 'inherit' }}>
+              <HomeIcon fontSize="small" />
+            </ListItemIcon>
+            <Typography variant="inherit" noWrap>Home</Typography>
+          </MyLink>
         </MenuItem>
-        <MenuItem>
-          <ListItemIcon>
-            <NewspaperIcon fontSize="small" />
-          </ListItemIcon>
-          <Typography variant="inherit" noWrap>News</Typography>
-        </MenuItem>
-        <Divider />
-        <MenuItem>
-          <ListItemIcon>
-            <PersonIcon fontSize="small" />
-          </ListItemIcon>
-          <Typography variant="inherit" noWrap>Profile</Typography>
-        </MenuItem>
-        <MenuItem>
-          <ListItemIcon>
-            <ForumIcon fontSize="small" />
-          </ListItemIcon>
-          <Typography variant="inherit" noWrap>Messages</Typography>
+        <MenuItem sx={{ padding: '0' }}>
+          <MyLink to="/news">
+            <ListItemIcon>
+              <NewspaperIcon fontSize="small" />
+            </ListItemIcon>
+            <Typography variant="inherit" noWrap>News</Typography>
+          </MyLink>
         </MenuItem>
         <Divider />
-        <MenuItem>
-          <ListItemIcon>
-            <Cloud fontSize="small" />
-          </ListItemIcon>
-          <ListItemText>Web Clipboard</ListItemText>
+        <MenuItem sx={{ padding: '0' }}>
+          <MyLink to="/profile">
+            <ListItemIcon>
+              <PersonIcon fontSize="small" />
+            </ListItemIcon>
+            <Typography variant="inherit" noWrap>Profile</Typography>
+          </MyLink>
+        </MenuItem>
+        <MenuItem sx={{ padding: '0' }}>
+          <MyLink to="/messages">
+            <ListItemIcon>
+              <ForumIcon fontSize="small" />
+            </ListItemIcon>
+            <Typography variant="inherit" noWrap>Messages</Typography>
+          </MyLink>
+        </MenuItem>
+        <MenuItem sx={{ padding: '0' }}>
+          <MyLink to="/music">
+            <ListItemIcon>
+              <LibraryMusicIcon fontSize="small" />
+            </ListItemIcon>
+            <Typography variant="inherit" noWrap>Music</Typography>
+          </MyLink>
+        </MenuItem>
+        <Divider />
+        <MenuItem sx={{ padding: '0' }}>
+          <MyLink to="/settings">
+            <ListItemIcon>
+              <SettingsIcon fontSize="small" />
+            </ListItemIcon>
+            <ListItemText>Settings</ListItemText>
+          </MyLink>
         </MenuItem>
       </MenuList>
-    </Paper>
+    </Paper >
   );
 }
 
