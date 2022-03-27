@@ -1,0 +1,10 @@
+.container {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+}
+
+.dialogs,
+.messages {
+  display: flex;
+  flex-direction: column;
+}

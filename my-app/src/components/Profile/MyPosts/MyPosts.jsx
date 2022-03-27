@@ -6,9 +6,21 @@ import { Button } from '@mui/material';
 import Post from './Post/Post';
 
 export default function MyPosts() {
+  let postsData = [
+    {
+      name: 'X',
+      text: 'Gggggggg...',
+    },
+    {
+      name: 'Y',
+      text: 'Ssssssss...',
+    }
+  ];
+
+  let postsNew = postsData.map( post => <Post name={post.name} text={post.text} />)
+
   return (
     <div className="myposts">
-      MyPosts
       <div className="textarea-box">
         <MyTextarea className={`textarea ${s.textarea}`}
           minRows={3}
@@ -17,8 +29,7 @@ export default function MyPosts() {
       </div>
       <Button variant="outlined">Send</Button>
       <div className="post-box">
-        <Post name='X' text='Gggggg...' />
-        <Post name='Y' text='SSSSss...' />
+        {postsNew}
       </div>
     </div>
   )

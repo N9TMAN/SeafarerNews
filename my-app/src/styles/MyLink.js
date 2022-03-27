@@ -6,8 +6,6 @@ const MyLink = styled(NavLink)(() => ({
   alignItems: 'center',
   textDecoration: 'none',
   color: "inherit",
-  padding: "6px 16px",
-  width: '100%',
 }));
 
 export default MyLink;

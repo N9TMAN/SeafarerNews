@@ -1,5 +1,5 @@
 import * as React from 'react';
-import MenuList from '@mui/material/MenuList';
+import MyMenuList from './../../../styles/MyMenuList';
 import MyMenuItem from './../../../styles/MyMenuItem';
 import Paper from '@mui/material/Paper';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -19,7 +19,7 @@ import './Navbar.css';
 export default function TypographyMenu() {
   return (
     <Paper className={`navbar-box ${s.navbar}`} sx={{ width: 230, color: 'inherit', backgroundColor: 'inherit', boxShadow: 'none' }}>
-      <MenuList>
+      <MyMenuList>
         <MyMenuItem>
           <MyLink to="/">
             <ListItemIcon sx={{ color: 'inherit' }}>
@@ -70,7 +70,7 @@ export default function TypographyMenu() {
             <ListItemText>Settings</ListItemText>
           </MyLink>
         </MyMenuItem>
-      </MenuList>
+      </MyMenuList>
     </Paper >
   );
 }

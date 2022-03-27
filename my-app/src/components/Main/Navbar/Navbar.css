@@ -1,3 +1,8 @@
-.navbar-box a.active {
+.main .navbar-box a.active {
   background-color: #0693d433;
+}
+
+.main .navbar-box a {
+  padding: 6px 16px;
+  width: 100%;
 }

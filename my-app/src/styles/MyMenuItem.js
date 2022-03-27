@@ -5,6 +5,7 @@ const MyMenuItem = styled(MenuItem)(() => ({
   padding: '0',
   borderRadius: '4px',
   overflow: 'hidden',
+  minHeight: 'auto',
 }));
 
 export default MyMenuItem;
