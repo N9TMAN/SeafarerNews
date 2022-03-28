@@ -14,7 +14,7 @@ import Settings from './../Settings/Settings';
 
 // console.log(root);
 
-const Main = () => {
+const Main = (props) => {
   return (
     <main className="main">
       <div className={`container ${s.container}`}>
@@ -23,8 +23,8 @@ const Main = () => {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/news' element={<News />} />
-            <Route path='/profile' element={<Profile />} />
-            <Route path='/messages' element={<Messages />} />
+            <Route path='/profile' element={<Profile postsData={props.postsData} />} />
+            <Route path='/messages' element={<Messages dialogsData={props.dialogsData} messagesData={props.messagesData} />} />
             <Route path='/music' element={<Music />} />
             <Route path='/settings' element={<Settings />} />
           </Routes>

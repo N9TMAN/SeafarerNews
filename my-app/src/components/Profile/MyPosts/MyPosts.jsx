@@ -5,19 +5,8 @@ import MyTextarea from './../../../styles/MyTextarea';
 import { Button } from '@mui/material';
 import Post from './Post/Post';
 
-export default function MyPosts() {
-  let postsData = [
-    {
-      name: 'X',
-      text: 'Gggggggg...',
-    },
-    {
-      name: 'Y',
-      text: 'Ssssssss...',
-    }
-  ];
-
-  let postsNew = postsData.map( post => <Post name={post.name} text={post.text} />)
+export default function MyPosts(props) {
+  let postsRender = props.postsData.map( post => <Post name={post.name} text={post.text} />)
 
   return (
     <div className="myposts">
@@ -29,7 +18,7 @@ export default function MyPosts() {
       </div>
       <Button variant="outlined">Send</Button>
       <div className="post-box">
-        {postsNew}
+        { postsRender }
       </div>
     </div>
   )

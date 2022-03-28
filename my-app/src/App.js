@@ -6,13 +6,13 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "./styles/Styles";
 import { BrowserRouter } from "react-router-dom";
 
-function App() {
+function App(props) {
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
         <div className="app">
           <Header />
-          <Main />
+          <Main postsData={props.postsData} dialogsData={props.dialogsData} messagesData={props.messagesData}/>
           <Footer />
         </div>
       </ThemeProvider>
