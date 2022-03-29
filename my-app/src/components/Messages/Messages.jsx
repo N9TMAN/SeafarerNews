@@ -4,9 +4,9 @@ import Dialog from './Dialog/Dialog';
 import Message from './Message/Message';
 
 const Messages = (props) => {
-  let dialogsRender = props.dialogsData
+  let dialogsRender = props.state.dialogsData
   .map( dialog => <Dialog id={dialog.id} name={dialog.name} />);
-  let messagesRender = props.messagesData
+  let messagesRender = props.state.messagesData
   .map( message => <Message text={message.text} />);
 
   return (

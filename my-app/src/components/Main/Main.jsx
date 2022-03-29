@@ -8,6 +8,7 @@ import { Route, Routes } from 'react-router-dom';
 import News from './../News/News';
 import Music from './../Music/Music';
 import Settings from './../Settings/Settings';
+import Friends from './../Friends/Friends';
 
 // let headerStyleHeight = document.querySelector('.main');
 // let root = document.querySelector('.app');
@@ -15,16 +16,20 @@ import Settings from './../Settings/Settings';
 // console.log(root);
 
 const Main = (props) => {
+  console.log(props);
   return (
     <main className="main">
       <div className={`container ${s.container}`}>
-        <Navbar className={s.navbar} />
+        <div className={s.navbar}>
+          <Navbar />
+          <Friends state={props.state.friendsPage} />
+        </div>
         <div className={s.content}>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/news' element={<News />} />
-            <Route path='/profile' element={<Profile postsData={props.postsData} />} />
-            <Route path='/messages' element={<Messages dialogsData={props.dialogsData} messagesData={props.messagesData} />} />
+            <Route path='/profile' element={<Profile state={props.state.profilePage} />} />
+            <Route path='/messages' element={<Messages state={props.state.messagesPage} />} />
             <Route path='/music' element={<Music />} />
             <Route path='/settings' element={<Settings />} />
           </Routes>

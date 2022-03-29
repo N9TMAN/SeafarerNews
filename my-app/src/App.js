@@ -12,7 +12,7 @@ function App(props) {
       <ThemeProvider theme={theme}>
         <div className="app">
           <Header />
-          <Main postsData={props.postsData} dialogsData={props.dialogsData} messagesData={props.messagesData}/>
+          <Main state={props.appState}/>
           <Footer />
         </div>
       </ThemeProvider>
