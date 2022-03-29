@@ -4,8 +4,7 @@ import Friend from './Friend/Friend';
 import s from './Friends.module.css';
 
 const Friends = (props) => {
-  console.log(props, "friends")
-  let friendsRender = props.state.friendsData.map(friend => <Friend name={friend.name} />)
+  let friendsRender = props.state.friendsData.map((friend, index) => <Friend name={friend.name} key={index}/>)
 
   return (
     <div className={s.box}>

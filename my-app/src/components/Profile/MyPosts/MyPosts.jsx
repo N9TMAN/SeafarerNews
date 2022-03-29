@@ -6,7 +6,7 @@ import { Button } from '@mui/material';
 import Post from './Post/Post';
 
 export default function MyPosts(props) {
-  let postsRender = props.state.map( post => <Post name={post.name} text={post.text} />)
+  let postsRender = props.state.map((post, index) => <Post name={post.name} text={post.text} key={index}/>)
 
   return (
     <div className="myposts">

@@ -16,7 +16,6 @@ import Friends from './../Friends/Friends';
 // console.log(root);
 
 const Main = (props) => {
-  console.log(props);
   return (
     <main className="main">
       <div className={`container ${s.container}`}>
