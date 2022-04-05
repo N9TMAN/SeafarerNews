@@ -12,7 +12,7 @@ function App(props) {
       <ThemeProvider theme={theme}>
         <div className="app">
           <Header />
-          <Main state={props.appState}/>
+          <Main state={props.appState} addPost={props.addPost}/>
           <Footer />
         </div>
       </ThemeProvider>

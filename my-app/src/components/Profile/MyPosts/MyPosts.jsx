@@ -6,17 +6,23 @@ import { Button } from '@mui/material';
 import Post from './Post/Post';
 
 export default function MyPosts(props) {
-  let postsRender = props.state.map((post, index) => <Post name={post.name} text={post.text} key={index}/>)
+  let postsRender = props.state.map((post, index) => <Post name={post.name} text={post.text} key={index}/>),
+    elPost = React.createRef(),
+    addPost = function() {
+      let text = elPost.current.value;
+      props.addPost(text);
+      elPost.current.value = '';
+  };
 
   return (
     <div className="myposts">
       <div className="textarea-box">
-        <MyTextarea className={`textarea ${s.textarea}`}
+        <MyTextarea ref={elPost} className={`textarea ${s.textarea}`}
           minRows={3}
           placeholder="Comments..."
         />
       </div>
-      <Button variant="outlined">Send</Button>
+      <Button onClick={addPost} variant="outlined">Send</Button>
       <div className="post-box">
         { postsRender }
       </div>
